@@ -1,0 +1,1324 @@
+{
+  "default": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "336501968593747970": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "530184611863724032": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "438122955667406858": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "498859797202993152": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "513039929023004673": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "456616189544628224": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "504987602181554176": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "438590624162250752": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "389118429166305280": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "458094318763376640": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "370708266348445697": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "485525417885696010": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "457244395834441740": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "474055302321405972": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "435446693605933086": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "324571175575355393": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "413443095263182848": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "513543761763106827": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "472876630126362635": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "452327671951523857": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "510855968872071169": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "476282672113516566": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "110373943822540800": {
+    "fuckSnipers": false,
+    "disableAutoresponses": true,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "297544892484419587": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "439866052684283905": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "396092339757645826": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "468544651385634836": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "369137409306132491": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "495817329901436929": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "460844225433436180": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "296698073177128962": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "471152801599455252": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "482631232707100682": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "504282791941505045": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "482417912972312577": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "477594445617954869": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "379277541229330432": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "335123169859993600": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "399182273280344065": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "410990517841690625": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "264445053596991498": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "196749904880730113": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "505939460693950475": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "481013284867145728": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "350035934571528202": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "426966462238818306": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "315547679176392707": {
+    "fuckSnipers": false,
+    "disableAutoresponses": true,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "455673092501536779": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "348937971409485857": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "486963531904712731",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "454443614991286302": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "406250533935120394": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "361846970815610880": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "337977030765445120": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "508802539899060224": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "437154461404626976": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "428277721768919040": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "450100127256936458": {
+    "fuckSnipers": false,
+    "disableAutoresponses": true,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "432609527183966218": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "429968406280798220": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "359414366916968459": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "531149486290894848",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "359417565228957706",
+    "nWordTaxes": false
+  },
+  "409112065769472011": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "431910179991322624": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "469779632695279616": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "236016860741500929": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "487730850192949248": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "491969465223872522": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "442416069169381386": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "493331787766824980": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "446359191892918295": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "298545134729953281": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "491862473683501056": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "381282786822193162": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "228625269101953035": {
+    "fuckSnipers": true,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "446783497500229632": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "466841782936797185": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "371631504436101122": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "419246883324559362": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "443095747915677717": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "437950980156293130": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "428835614964580354": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "465618309585305611": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "240843640375607296": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "495580109227687936": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "287454987141906433": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "453899593898393614": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "490517542524420098": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "451042280053276682": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "480482359284727830": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "485509045038350346": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "416031810066186240": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "521919378753847296": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "434112131957522463": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "478362213279596545": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "424610841200164865": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "315683286242557955": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "449345217334607872": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "371008132849074187": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "354415701768929290": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "302605885669113858": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "481017415715651584": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "441654887043039252": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "166048661099249667": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "285899383063576576": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "334269899713019904": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "424838167984603147": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "455786887463043072": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "360108555334057984": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "482384934527303681": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "434792533638512660": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "407820400190423051": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "505422521999425539": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "508286965846900737": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "344513593728827393": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "457529701192433705": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "423834632467906560": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "484668536875384844": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "485703309177520129": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "504387820526239774": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "504281616433020929": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "419852857592774658": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "440434894905278465": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "429464366660714506": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "487240565583511553": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "339806932279754752": {
+    "fuckSnipers": false,
+    "disableAutoresponses": true,
+    "rolebanRole": "533961274325991455",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "533670911694471179",
+    "nWordTaxes": false
+  },
+  "484499786288988172": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "482734525563273216": {
+    "fuckSnipers": true,
+    "disableAutoresponses": true,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "534096590361591818": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "518536984936054784": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "499671609322373121": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "531886876689301519": {
+    "fuckSnipers": true,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "329304421894848515": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "505029029208915968": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "487640086859743232": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "467847839595102209": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "343594412166873100": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "537695040982482946": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "536600875813044234": {
+    "fuckSnipers": false,
+    "disableAutoresponses": true,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "539128436342390785": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "518435326264344608": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "525049393582440488": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "265644608904626176": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "541046257888526346": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": false,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "542796345464061992": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "534777005825064992": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none"
+  },
+  "441040177511792650": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  },
+  "543160770318303326": {
+    "fuckSnipers": false,
+    "disableAutoresponses": false,
+    "rolebanRole": "none",
+    "kitchenSinkMode": true,
+    "allowEdits": true,
+    "botRole": "none",
+    "nWordTaxes": true
+  }
+}
