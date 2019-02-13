@@ -7,9 +7,9 @@ All the aliases that can be used. Must be an array (optional)
 Self descripive (optional)
 ## usage: '[@everyone]'
 How to use the command. Note that the name of the command isn't on the usage string because it already appears when you see the help command for it (like
-- **usage:"blablabla"**
+- **usage: "blablabla"**
 and then in the help command:
-- **Usage :hi!command blablabla**
+- **Usage: hi!command blablabla**
 ## category: 'meme'
 The category for the command. If the category isn't "owner", "general", "utility", "fun", "economy", "text", "meme", "mod","dbots", "lgtb", "wip" or "easter egg", the command will be automatically put in the no categorized commands in hi!help. Commands with "owner"/"wip" categories are already restricted to me and so are commands with "lgtb" and "dbots" for the respective servers they represent, so if you don't see any **if (message.author.id)** thing on them, you now know why (obligatory)
 ## insensitive: true
