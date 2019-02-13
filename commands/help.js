@@ -19,7 +19,8 @@ module.exports = {
             "mod",
             "dbots",
             "lgtb",
-            "easter egg"
+            "easter egg",
+            "wip",
         ]
 
         function getsomehelp(category) {
@@ -46,7 +47,7 @@ module.exports = {
         let prefix = utils.checkCommand(message.content, "prefix")
 
         if (!args[0]) {
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.RichEmbed() 
                 .setAuthor(`All commands (${client.commands.size - hsecret.length})`)
                 .setDescription("Run `hi!help [command]` to see more info about it!")
                 .addField(`Owner (${howner.length})`, `${howner.join("\n")}`, true)
@@ -68,14 +69,12 @@ module.exports = {
                    message.channel.send("Enable your DMs first, nerd")
                )
 
-            //easter eggs
-
-        } else if (args[0] === 'me') {
-            const embed = new Discord.RichEmbed()
-                .setAuthor("Hey, is everything alright?")
-                .setDescription("Listen, there is still people who love you and don't want you to go. Use `hi!suicide` to contact the suicide prevention hotlines, you are worth it. Everyone cares about you. ❤")
-            message.channel.send({ embed })
-        } else
+        } else /*
+            
+            
+            [redactaded]
+            
+             */
 
         if (args[0] === 'yourself') {
             var ks = new Discord.RichEmbed()
@@ -83,9 +82,9 @@ module.exports = {
             message.channel.send(ks)
         } else
 
-        if (args[0] === 'help') {
-          args[0] = "oldhelp"      
-        } 
+        /*
+        [RDACETED]
+        */
 
 
             if (args[0] === 'easter' && args[1] === 'egg') {
