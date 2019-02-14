@@ -31,7 +31,7 @@ module.exports = {
             return '#' + r + g + b;
         }
         
-        utils.get(" https://plaza.one/api/status", {
+        utils.get(" https://api.plaza.one/status", {
         }).then((response) => {
   return response.json();
 }).then((response) => {
