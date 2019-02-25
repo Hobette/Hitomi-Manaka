@@ -19,7 +19,6 @@ module.exports = {
 hi!ban [user 1] [user 2] [etc...] [optional reason]\`\`\`
 Both mentions and users are valid. This command can also perform hackbanning (aka banning members that aren't on your server by using their user IDs)`)
 
-        var victimmsg = []
         await victims.forEach(async e => {
             var ded = message.guild.ban(e, reason).then(async ded => {
                 var dedname = `**${ded.tag} (${ded.id})**`
