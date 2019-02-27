@@ -12,7 +12,7 @@ module.exports = {
     idRegex: /[^0-9]/g,
 
     //functions
-    unvaporwave: function (text) {
+    unvaporwave(text) {
         try {
         if (typeof text !== "string") { throw "(text) must be a string, nerd"}
         var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789.?!,:;\"'-_+%=$*(){}[]<>|/~\\@&%£#"
@@ -29,20 +29,19 @@ module.exports = {
         } catch (error) { console.log(error) }
     }, 
 
-    checkCommand: function (text, output) {
+    checkCommand(text, output) {
         try {
         if (typeof text !== "string") {throw "Both text and output must be strings"}
-        const utils = require("./utils.js")
         var prefixes = require('./util/data holders/prefixes.json')
         let prefix = false;
         for (const thisPrefix of prefixes) {
-            if (utils.unvaporwave(text.toLowerCase()).startsWith(thisPrefix)) prefix = thisPrefix;
+            if (this.unvaporwave(text.toLowerCase()).startsWith(thisPrefix)) prefix = thisPrefix;
         }
-        if (utils.unvaporwave(text.toLowerCase()).startsWith(prefix)) {
+        if (this.unvaporwave(text.toLowerCase()).startsWith(prefix)) {
             var args = text.slice(prefix.length).trim().split(/ +/g);
-            args = utils.unvaporwave(args.join(' ')).split(' ')
+            args = this.unvaporwave(args.join(' ')).split(' ')
             var commandName = args.shift().toLowerCase();
-            commandName = utils.unvaporwave(commandName)
+            commandName = this.unvaporwave(commandName)
             //this allows to use commands with full-width chars 
             for (i = 0; i < args.length; i++) {
                 args[i] = args[i].replace(/discord.gg\/[0-9A-Za-z]+/g, "discord.gg/[CRINGE SERVER]").replace(this.racistRegex, ":heart:")
@@ -63,7 +62,8 @@ module.exports = {
         } else return false
     } catch (error) { console.log(error) }
     },
-    setDefaultSettings: function (guildid) {
+    
+    setDefaultSettings(guildid) {
         this.settings[guildid] = this.settings["default"]
         this.fs.writeFile('./util/data holders/guildsettings.json', JSON.stringify(this.settings, null, 2), function (error) {
             if (error) {
@@ -71,17 +71,20 @@ module.exports = {
             }
         })
     },
-    embedImage: function (zelda) {
+  
+    embedImage(zelda) {
         const Discord = require("discord.js")
         var embed = new Discord.RichEmbed()
             .setImage(zelda) 
         return embed
     },
 
-    firstLetterUppercase: function (string) {
+    firstLetterUppercase(string) {
         return string = string.replace(string[0], string[0].toUpperCase())
     },
-    yesNo: function (bool, trueString, falseString) {
+    
+    yesNo(bool, trueString, falseString) {
         if (typeof bool !== "boolean") throw "First argument on the function must be either true or false";
         return bool.toString().replace("true", trueString).replace("false", falseString);
-     }}
+     }
+}
