@@ -150,21 +150,18 @@ client.on("message", async (message) => {
         || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
         if (!command) return;
 
-        if (command.category === 'dbots' && message.guild.id !== '110373943822540800') { return; } else 
-        if (command.category === 'lgtb' && message.guild.id !== '348937971409485857') { return; } else 
+        if (command.category === 'dbots' && message.guild.id !== '110373943822540800') return;
+        if (command.category === 'lgtb' && message.guild.id !== '348937971409485857') return; 
         //for the guild exclusive commands
 
         if (command.insensitive == true && args.length != 0) { args = args.join(' ').toLowerCase().split(' ') } 
         //converts args to lowerCase in commands that have this enabled
 
-        if (command.name === 'despacito' && message.author.id !== config.ownerID) {
-            message.channel.send('https://genius.com/songs/2955220')
-        } else
-
-        var isOwner = false;
-        if (message.author.id === config.ownerID) { isOwner = true; }
-        if (command.category === "owner" && isOwner == false) return;
-        if (command.category === "wip" && isOwner == false) return message.channel.send("WIP command, sorry.");
+    
+        var isOwner = message.author.id === config.ownerID || message.author.id === "401398653236936706";
+        if (command.name === "despacito" && !isOwner) return message.channel.send('https://genius.com/songs/2955220')
+        if (command.category === "owner" && !isOwner) return;
+        if (command.category === "wip" && !isOwner) return message.channel.send("WIP command, sorry.");
 
     try {
         command.execute(client, config, Discord, target, utils, message, args);
