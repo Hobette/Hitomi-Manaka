@@ -18,20 +18,9 @@ module.exports = {
             return text;
         }
 
-        var dcuser = client.users.get(args[0])
+        var dcuser = message.guild.members.get(target.id).displayName
         var renamepls = ''
-        if (dcuser === undefined) {
-            dcuser = message.mentions.users.first()
-            if (!dcuser) {
-                dcuser = args.join(' ')
-            } else {
-                dcuser = dcuser.username
-                renamepls = dcuser.id
-            }
-        } else {
-            dcuser = dcuser.username
-            renamepls = dcuser.id
-        }
+        
         var decancered = decancer(dcuser)
         if (decancered === '') {
             decancered = 'Best name ever.'
