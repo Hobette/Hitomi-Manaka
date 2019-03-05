@@ -19,7 +19,7 @@ module.exports = {
 - [Discord Bot List (.org)](https://discordbots.org/bot/431495393520386068) 
 - [Discord Bot List (.com)](https://discordbotlist.com/bots/431495393520386068)
 - [Discord Boats](https://discord.boats/bot/431495393520386068)
-- [Github (might not be updated)](https://github.com/GmdDjca/Hitomibot)`)
+- [Github (might not be updated)](https://github.com/GmdDjca/Hitomi-Manaka)`)
             .addField("CREDITS", "Run `"+thing+"`")
           message.channel.send({ embed });
         }
