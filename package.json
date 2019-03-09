@@ -1,0 +1,25 @@
+{
+  "name": "hitomi",
+  "version": "0.6.9",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "discord-economy": "^1.1.6",
+    "discord.js": "^11.4.2",
+    "eshop-api-wrapper": "^0.2.2",
+    "express": "^4.16.2",
+    "limax": "^1.7.0",
+    "tatsu.js": "^0.1.5",
+    "unique-random-array": "^1.0.1",
+    "unorm": "^1.4.1",
+    "url-unshort": "^5.0.0",
+    "ytdl-core": "^0.25.2"
+  },
+  "description": "My name jeff",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tina the Cyclops",
+  "license": "ISC"
+}
