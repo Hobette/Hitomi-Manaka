@@ -43,10 +43,7 @@ module.exports = {
             var commandName = args.shift().toLowerCase();
             commandName = this.unvaporwave(commandName)
             //this allows to use commands with full-width chars 
-            for (i = 0; i < args.length; i++) {
-                args[i] = args[i].replace(/discord.gg\/[0-9A-Za-z]+/g, "discord.gg/[CRINGE SERVER]").replace(this.racistRegex, ":heart:")
-            }    
-            //replaces any invite or racist/homophobic word in any command that uses args
+	 
             if (output === "prefix") {
                 return prefix;
             } else
@@ -58,6 +55,14 @@ module.exports = {
             } else
             if (output === "command") {
                 return prefix+commandName;
+            } else 
+            if (output === "multitarget") {
+                args.push("")
+                var victims = args.map(a => a.replace(/[^0-9]+/g, ""))
+	            victims = victims.slice(0, victims.indexOf(""))
+	            var reason = args.slice(victims.length, args.length)
+                if (!reason[0]) { reason = "None." } else { reason = reason.join(" ") }
+            return { "victims": victims, "reason": reason}
             } else return output;
         } else return false
     } catch (error) { console.log(error) }
@@ -83,8 +88,9 @@ module.exports = {
         return string = string.replace(string[0], string[0].toUpperCase())
     },
     
-    yesNo(bool, trueString, falseString) {
+    yesNo(bool, yes, no) {
         if (typeof bool !== "boolean") throw "First argument on the function must be either true or false";
-        return bool.toString().replace("true", trueString).replace("false", falseString);
+        if (!bool) return no;
+        return yes;
      }
 }
