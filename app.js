@@ -108,19 +108,9 @@ client.on("messageDelete", (message) => {
       member.addRoles([utils.settings[member.guild.id].botRole], "botRole is enabled.").catch((error) => member.guild.me.lastMessage.channel.send("Something happened while adding the role to the bot: "+error))
   })
 
-  /*
-client.on("messageReactionAdd", async (reaction, user) =>{
-    if (reaction.message.channel.id === "537721627899854858") {
-        var userr = client.guilds.get("348937971409485857").members.get(user.id)
-        userr.kick("They shouldn't have pressed the button")
-        client.channels.get('537721627899854858').overwritePermissions(user.id, {"VIEW_CHANNEL": false})
-        client.channels.get('537732155220951050').overwritePermissions(user.id, {"VIEW_CHANNEL": true})
-    }
-})
-  */
 client.on("message", async (message) => {
     if (message.channel.type === 'dm') return;
-    if (blacklist.guilds.includes(message.guild.id)) return message.guild.leave()
+    if (blacklist.guilds.includes(message.guild.id)) return message.guild.leave();
 
 
     const Discord = require("discord.js");
@@ -157,19 +147,17 @@ client.on("message", async (message) => {
         if (command.insensitive == true && args.length != 0) { args = args.join(' ').toLowerCase().split(' ') } 
         //converts args to lowerCase in commands that have this enabled
 
-    
         var isOwner = message.author.id === config.ownerID || message.author.id === "401398653236936706";
         if (command.name === "despacito" && !isOwner) return message.channel.send('https://genius.com/songs/2955220')
         if (command.category === "owner" && !isOwner) return;
         if (command.category === "wip" && !isOwner) return message.channel.send("WIP command, sorry.");
 
-    try {
-        command.execute(client, config, Discord, target, utils, message, args);
-    }
-    catch (error) {
+        command.execute(client, config, Discord, target, utils, message, args)
+        .catch (error => {
         message.channel.send(`\`Beep boop error!\`
 \`\`\`xl\n${error}\`\`\``);
-    }     
+    });
+    
 });
 
 client.on("messageUpdate", async (oldMsg, newMsg) => {
