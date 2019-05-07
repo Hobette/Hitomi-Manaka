@@ -20,35 +20,28 @@ module.exports = {
 
         if (!args[0]) {
             var bbbbb = message.guild.roles.get(set.rolebanRole)
-
-            if (bbbbb === undefined) { bbbbb = "None" } else { bbbbb = bbbbb.name }
+            if (bbbbb === undefined) { bbbbb = "None" }
 
             var botr = message.guild.roles.get(set.botRole)
-            if (botr === undefined) { botr = "None" } else { botr = botr.name }
+            if (botr === undefined) { botr = "None" } 
 
             const embed = new Discord.RichEmbed()
                 .setAuthor(message.guild.name + "'s settings", message.guild.iconURL+"?size=2048")
-                .setDescription(`\`\`\`To configure the settings below, run "${utils.checkCommand(message.content, "command")} {setting} {value}", or "${utils.checkCommand(message.content, "command")} reset" to pur everything on its default state. Everything in this command is case sensitive.\`\`\``)
-                
-                .addField(`fuckSnipers: ` + set.fuckSnipers.toString(), 
-                "Disables `hi!snipe` for everyone in the server, except for those that can delete messages. `[true/false]`", true)
-                .addField(`disableAutoresponses: ` + set.disableAutoresponses.toString(), 
-                "Toggles autoresponses in the whole server. `[true/false]`", true)
-                .addField(`rolebanRole: ` + bbbbb, 
-                "The role used for hi!roleban. `[role mention/name/id/none]`", true)
-                .addField(`botRole: ` + botr, 
-                "A role that will be given to bots when they join the server. `[role mention/name/id/none]`", true)
-                .addField(`kitchenSinkMode: ` + set.kitchenSinkMode.toString(), 
-                "Inspired on `Kitchen Sink#6569`, replaces the help command with a message saying \"Help yourself.\", just like the original bot. For meme purposes. `[true/false]`", true)
-                .addField(`allowEdits: ` + set.allowEdits.toString(), 
-                "Allows editing messages to use the bot.`[true/false]`", true)
-                .addField(`nWordTaxes: ` + set.nWordTaxes.toString(), 
-                "When true, removes 15 sapphires from any user for each time they include a racist/homophobic word (not 100% accurate). A better way to enforce the non usage of them, but disable them if this annoys you (woah you're a racist).`[true/false]`", true)
+                .setDescription(`[Click here to see what every setting does](https://gist.github.com/GmdDjca/3e862ba016c2f664d71d636d108bd1ff)
 
-                if (message.guild.me.highestRole.color > 0) { embed.setColor(message.guild.me.colorRole.color) }
+\`fuckSnipers\`: ${set.fuckSnipers}
+\`disableAutoresponses\`: ${set.disableAutoresponses}
+\`rolebanRole\`: ${bbbbb}
+\`kitchenSinkRole\`: ${set.kitchenSinkMode}
+\`botRole\`: ${botr}
+\`allowEdits\`: ${set.allowEdits}
+\`nWordTaxes\`: ${set.nWordTaxes}`)
+               
+   if (message.guild.me.highestRole.color > 0) { embed.setColor(message.guild.me.colorRole.color) }
             message.channel.send(embed)
 
         } else {
+
             if (args[0] === "reset") {
                 utils.setDefaultSettings(message.guild.id);
                 return message.channel.send("Succesfully reset this guild's options!");
