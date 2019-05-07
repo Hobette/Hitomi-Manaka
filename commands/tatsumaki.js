@@ -9,10 +9,11 @@ module.exports = {
         var tatsu = new Tatsu(config.tatsuapikey);
 
         tatsu.getUser(target.id).then(async user => {
+            console.log(user);
             var embed = new Discord.RichEmbed()
                 .setColor("#17A166")
                 .setAuthor(target.tag + "'s info:", "https://cdn.discordapp.com/attachments/406497072939008001/551082827609931777/enlarge.png")
-                .setThumbnail(user.background)
+                .setThumbnail(user.background_url)
 
                 .setDescription(`*${utils.yesNo(user.title !== "", user.title, "[no title]")}*
 ${utils.yesNo(!user.info_box !== "", user.info_box, "[no info]")}`)
@@ -21,9 +22,15 @@ ${utils.yesNo(!user.info_box !== "", user.info_box, "[no info]")}`)
 **Reputation:** ${user.reputation}
 **Credits:** ${user.credits}
 **XP:** ${user.total_xp} (${user.next_level_xp - user.level_xp} until next level)
-**Background**: [Click here](${user.background})`)
-            message.channel.send(embed).catch(()=>{message.channel.send("I need embed permissions!")})
-        }).catch(e=>{message.channel.send(`\`tatsumaki api broke smh\`
+**Background**: [Click here](${user.background_url})`)
+            message.channel.send(embed).catch((err)=>{ 
+                console.log(err)
+                message.channel.send("I need embed permissions!")
+            })
+        })
+        
+        .catch(e=>{
+            message.channel.send(`\`tatsumaki api broke smh\`
 \`\`\`xl\n${JSON.stringify(e)}\`\`\``)
 })
         /*{
@@ -41,7 +48,7 @@ ${utils.yesNo(!user.info_box !== "", user.info_box, "[no info]")}`)
             "credits": 1857200, 
             "reputation": 372
         }
-        (for example purposes)
+        (for reminder purposes)
         */
 
     },
