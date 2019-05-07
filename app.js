@@ -1,6 +1,6 @@
 //hie
 var utils = require("./utils.js")
-const Discord = require("discord.js");
+var Discord = require("discord.js");
 const client = new Discord.Client({
     disableEveryone: true,
     disabledEvents: [
@@ -112,21 +112,9 @@ client.on("guildMemberAdd", member => {
     member.addRoles([utils.settings[member.guild.id].botRole], "botRole is enabled.").catch((error) => member.guild.me.lastMessage.channel.send("Something happened while adding the role to the bot: " + error))
 })
 
-/*
-client.on("messageReactionAdd", async (reaction, user) =>{
-  if (reaction.message.channel.id === "537721627899854858") {
-      var userr = client.guilds.get("348937971409485857").members.get(user.id)
-      userr.kick("They shouldn't have pressed the button")
-      client.channels.get('537721627899854858').overwritePermissions(user.id, {"VIEW_CHANNEL": false})
-      client.channels.get('537732155220951050').overwritePermissions(user.id, {"VIEW_CHANNEL": true})
-  }
-})
-*/
 client.on("message", async (message) => {
     if (message.channel.type === 'dm') return;
     if (blacklist.guilds.includes(message.guild.id)) return message.guild.leave()
-
-    const Discord = require("discord.js");
     var prefix = utils.checkCommand(message.content, "prefix")
 
     if (!utils.checkCommand(message.content, true) || message.author.bot) return undefined;
@@ -139,10 +127,9 @@ client.on("message", async (message) => {
 
     var target
     if (!args[0]) { target = message.author } else {
-
-        if (client.users.get(args[0].replace(/[^0-9]/g, "")) !== undefined) {
-            target = client.users.get(args[0].replace(/[^0-9]/g, ""));
-        } else
+	
+        if (client.users.get(args[0].replace(/[^0-9]/g, "")) !== undefined) { target = client.users.get(args[0].replace(/[^0-9]/g, "")); } else
+        if (args[0] === "@someone") { target = message.guild.members.random().user } else
 
             if (message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' ')))) !== null) {
                 target = message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' '))));
@@ -174,19 +161,13 @@ client.on("message", async (message) => {
     command.execute(client, config, Discord, target, utils, message, args)
         .catch((error) => {
             message.channel.send(`\`Beep boop error!\`
-\`\`\`xl\n${error}\`\`\``);
+\`\`\`xl\n${error}\`\`\`Please report this error to my dev either using \`hi!feedback\`, joining my support server or DMing me.`);
         })
 });
 
 client.on("messageUpdate", async (oldMsg, newMsg) => {
-    if (newMsg.channel.type === 'dm' || (oldMsg.pinned && !newMsg.pinned) || (!oldMsg.pinned && newMsg.pinned) || oldMsg.bot) return; 
-
-        if (utils.checkCommand(newMsg.content, true) && utils.settings[newMsg.guild.id].allowEdits === true) { client.emit("message", newMsg) }
-    var command = utils.checkCommand(newMsg.content, "name")
-    if (command !== "snipe") {
-        oldMsg.content = "`[edited]` " + oldMsg.content
-        client.emit("messageDelete", oldMsg)
-    }
+    if (newMsg.channel.type === 'dm' || oldMsg.content === newMsg.content || newMsg.author.bot) return; 
+    if (utils.checkCommand(newMsg.content, true) && utils.settings[newMsg.guild.id].allowEdits === true) { client.emit("message", newMsg) }
 });
 
 //DM logging
@@ -197,7 +178,7 @@ client.on("message", async (message) => {
         if (utils.checkCommand(message.content, "prefix")) return message.channel.send("I'm not made to work in the DMs, please use me in a guild.")
         var attachments = ""
         if (message.attachments.size > 0) {
-            attachments = `Attachments: ` + message.attachments.map(a => a.url)
+            attachments = `Attachments: ` + message.attachments.map(a => `||${a.url}||`).join("\n")
         }
         message.channel.send("Your message has been sent to a private channel in my support server (attachments are sent too btw)").then(msg=>msg.delete(10000))
         if (message.content === "") { message.content = "[no content]" }
@@ -249,14 +230,18 @@ client.on("message", (message) => {
 
     if (message.guild.id === "110373943822540800" || message.guild.id === "450100127256936458") return; //Discord Bots and Discord Bot List (.com)
 
+    if (message.content.startsWith("t!") && message.content.toLowerCase().startsWith("t!daily")) {
+        if (message.guild.members.has("172002275412279296")) {message.channel.send("Hello <@172002275412279296>")} else
+        message.channel.send("what")
+    }
+    
     var triggerContent = {
         "no u": [`Wow, what an original comeback ${message.author}`],
         "a": [`a`],
-        "t!daily": [`Hello <@172002275412279296>`],
         "nothing": [`*seinfeld bass line*`],
         "it's": [`the`, `NUTSHACK`],
         "its": [`the`, `NUTSHACK`],
-        "claps": [`clap clap clap`],
+        "cg": [`coconut gun`],
         "des": [`cito`],
         "despa": [`stop`],
         "rawr": [`xd`],
@@ -279,9 +264,6 @@ client.on("message", (message) => {
     }
     if (trigger.includes("hola")) {
         message.react('🌊')
-    }
-    if (trigger.startsWith("like if ")) {
-        message.react('👍')
     }
 });
 
