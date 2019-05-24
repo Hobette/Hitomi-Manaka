@@ -198,7 +198,7 @@ client.on("message", (message) => {
         trigger.includes(".iam") ||
         trigger.includes("?role")
     ) && message.member.roles.has("350261118511611914")) {
-        message.reply("you need to see the roles at <#349120132674748418> and ping a moderator or a verification helper in order to tell them the roles you want so they can verify you (you need at least a sexuality role)")
+        message.reply("that's not how it works! You need to see the roles at <#349120132674748418> and ping a moderator or a verification helper in order to tell them the roles you want so they can verify you. One of these roles must be a sexuality, these are at the top of the channel (and yes, your *actual* sexuality, although you can also keep it as a secret or say you're unsure. Or that you just don't label yourself)")
     }
 
     if (trigger.includes("owned")) {
@@ -231,30 +231,33 @@ client.on("message", (message) => {
     if (message.guild.id === "110373943822540800" || message.guild.id === "450100127256936458") return; //Discord Bots and Discord Bot List (.com)
 
     if (message.content.startsWith("t!") && message.content.toLowerCase().startsWith("t!daily")) {
-        if (message.guild.members.has("172002275412279296")) {message.channel.send("Hello <@172002275412279296>")} else
-        message.channel.send("what")
+        message.channel.send(message.guild.members.has("172002275412279296") ? "Hello <@172002275412279296>" : message.channel.send("what"))
     }
     
-    var triggerContent = {
-        "no u": [`Wow, what an original comeback ${message.author}`],
-        "a": [`a`],
-        "nothing": [`*seinfeld bass line*`],
-        "it's": [`the`, `NUTSHACK`],
-        "its": [`the`, `NUTSHACK`],
-        "cg": [`coconut gun`],
-        "des": [`cito`],
-        "despa": [`stop`],
-        "rawr": [`xd`],
-        "this is america": [`No this is ${message.guild.name}`],
-        "thanos car": [message.content]
+    var triggers = {
+        "no u": `Wow, what an original comeback ${message.author}`,
+        "a": `a`,
+        "nothing": `*seinfeld bass line*`,
+        "it's": `It's`,
+        "cg": `coconut gun`,
+        "des": `cito`,
+        "despa": `stop`,
+        "rawr": `xd`,
+        "thanos car": message.content
     }
-    function plsSay(reactions) {
-        for (i = 0; i < reactions.length; i++) {
-            if (!message.guild.me.permissionsIn(message.channel).has("SEND_MESSAGES")) return;
-            message.channel.send(reactions[i]).then()
-        }
-    }
-    if (triggerContent[trigger] != undefined) { plsSay(triggerContent[trigger]) }
+
+    if (triggers[trigger] != undefined && message.guild.me.permissionsIn(message.channel).has("SEND_MESSAGES")) { 
+        /*
+        console.log("========================================================================================")
+        console.log(`                                                              trigger : ${trigger}`)
+        console.log(`                                                    triggers[trigger] : ${triggers[trigger]}`)
+        console.log(`                                   utils.unvaporwave(message.content) : ${utils.unvaporwave(message.content)}`)
+        console.log(`                                      triggers[trigger].toUpperCase() : ${triggers[trigger].toUpperCase()}`)
+        console.log(`            utils.unvaporwave(message.content).replace(/[^a-z]/g, "") : "${utils.unvaporwave(message.content).replace(/[^a-z]/g, "")}"`)
+        console.log(`utils.unvaporwave(message.content).replace(/[^a-z]/g, "").length == 0 : ${utils.unvaporwave(message.content).replace(/[^a-z]/g, "").length == 0}`)
+        */ //i was debugging stuff lol
+        message.channel.send(utils.unvaporwave(message.content).replace(/[^a-z]/g, "").length == 0 ? triggers[trigger].toUpperCase() : triggers[trigger])
+     }
 
     if (trigger.includes("fix hitomibot")) {
         message.react('473450929895636993');
