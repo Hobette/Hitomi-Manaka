@@ -1,13 +1,21 @@
 module.exports = {
     name: 'finduser',
     aliases: ['searchuser'],
-    description: 'Finds users that matches your arguments AND share a server with me \n(no, this one does NOT abuse the api)',
+    description: 'Finds users that matches your arguments AND share a server with me \n(no, this one does NOT abuse the api). You can also put flags anywhere to filter the users found.',
+    usage: "[text and optional flags] ",
     category: "utility",
     execute: async (client, config, Discord, target, utils, message, args) => {
-        //return message.channel.send("Rewritting")
+        let flags = [...new Set(args.join(" ").trim().match(/--[bhs]/g))]
+            flags.push("")
+            args = args.join(" ").replace(/--[bhs]/g, "").trim().split(" ")
+
         var page = 1
-        var displayusers = client.users.array()
-            .filter(u => u.tag.toLowerCase().includes(args.join(" ").toLowerCase()))
+        var displayusers = client.users.filter(u => u.tag.toLowerCase().includes(args.join(" ").toLowerCase()))
+        
+            if (flags.includes("--h")) {displayusers = displayusers.filter(e=>!e.bot)}
+            if (flags.includes("--b")) {displayusers = displayusers.filter(e=> e.bot)}
+            if (flags.includes("--s")) {displayusers = displayusers.filter(e=> message.guild.members.has(e.id))}   
+        displayusers = displayusers.array()
 
         if (!displayusers[0]) return message.channel.send("No users were found!")
         if (displayusers.length === 1) return client.commands.get("user").execute(client, config, Discord, displayusers[0], utils, message, args);
@@ -24,8 +32,8 @@ module.exports = {
 
 ` + displayusers.slice(10 * (page-1), (10 * (page-1)) + 10).join("\n")
 )
-
-        message.channel.send("TIP: when only one user is found, the `hi!user` command will show up instead of this", j).then(msg => {
+        .setFooter("Filters: --h humans only, --b to show bots only and --s to only show people in this server")
+        message.channel.send("TIP: when only one user is found, the `hi!user` command will show up instead of this embed.", j).then(msg => {
             if (displayusers.length < 10) return;
             msg.react('⏪').then(async r => {
                 await msg.react('⏩')
