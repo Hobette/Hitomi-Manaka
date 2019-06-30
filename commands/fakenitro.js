@@ -6,7 +6,7 @@ module.exports = {
     description: 'Generates a fake nitro gift link',
     category: 'fun',
     execute: async (client, config, Discord, target, utils, message, args) => {
-        const links = parseInt(args[0]) || 1;
+        let links = parseInt(args[0]) || 1;
         if (links < 1) links = 1;
         else if (links > 5) links = 5;
         
