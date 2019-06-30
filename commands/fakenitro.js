@@ -7,7 +7,8 @@ module.exports = {
     category: 'fun',
     execute: async (client, config, Discord, target, utils, message, args) => {
         const links = parseInt(args[0]) || 1;
-        if (links > 5) links = 5;
+        if (links < 1) links = 1;
+        else if (links > 5) links = 5;
         
         message.channel.send(new Array(links).fill(null).map(() => formatLink()).join(" "));
     },
