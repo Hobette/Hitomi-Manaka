@@ -7,7 +7,7 @@ module.exports = {
     settings: require("./util/data holders/guildsettings.json"),
 
     //Other stuff
-    racistRegex: /n[\w\W]+gg[\w\W]+|f[aA\W*-_0-9]gg[\w\W]+|f[aA\W*-_0-9]g|kys/gi,
+    racistRegex: /nig(g|)(a|er)|fag(|got|ger|git)|kys|trann(y|ies)/gi,
     inviteRegex: /discord.gg\/[0-9A-Za-z]+/g,
     idRegex: /[^0-9]/g,
 
@@ -29,8 +29,13 @@ module.exports = {
         } catch (error) { console.log(error) }
     }, 
 
+    unemojify(text) {
+        return text.replace(/🅱/g, "b").replace(/🅾/g, "b").replace(/🅰/g, "b")
+    },
+
     checkCommand(text, output) {
         try {
+        text = this.unemojify(text)
         if (typeof text !== "string") {throw "Both text and output must be strings"}
         var prefixes = require('./util/data holders/prefixes.json')
         let prefix = false;
@@ -61,8 +66,7 @@ module.exports = {
                 var victims = args.map(a => a.replace(/[^0-9]+/g, ""))
 	            victims = victims.slice(0, victims.indexOf(""))
 	            var reason = args.slice(victims.length, args.length)
-                if (!reason[0]) { reason = "None." } else { reason = reason.join(" ") }
-            return { "victims": victims, "reason": reason}
+            return { "victims": [...new Set(victims)], "reason": reason}
             } else return output;
         } else return false
     } catch (error) { console.log(error) }
@@ -87,10 +91,18 @@ module.exports = {
     firstLetterUppercase(string) {
         return string = string.replace(string[0], string[0].toUpperCase())
     },
+
+    vaporwavecolor() {
+        var r = (Math.round(Math.random()* 127) + 127).toString(16);
+        var g = (Math.round(Math.random()* 127) + 127).toString(16);
+        var b = (Math.round(Math.random()* 127) + 127).toString(16);
+        return '#' + r + g + b;
+    },
     
     yesNo(bool, yes, no) {
         if (typeof bool !== "boolean") throw "First argument on the function must be either true or false";
         if (!bool) return no;
         return yes;
-     }
+     },
+     
 }
