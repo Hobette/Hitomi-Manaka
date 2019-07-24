@@ -81,7 +81,7 @@ module.exports = {
         })
     },
   
-    embedImage(zelda) {
+    embedImage(zelda) { //lol memes
         const Discord = require("discord.js")
         var embed = new Discord.RichEmbed()
             .setImage(zelda) 
@@ -97,12 +97,5 @@ module.exports = {
         var g = (Math.round(Math.random()* 127) + 127).toString(16);
         var b = (Math.round(Math.random()* 127) + 127).toString(16);
         return '#' + r + g + b;
-    },
-    
-    yesNo(bool, yes, no) {
-        if (typeof bool !== "boolean") throw "First argument on the function must be either true or false";
-        if (!bool) return no;
-        return yes;
-     },
-     
+    },    
 }
