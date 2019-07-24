@@ -3,15 +3,14 @@ module.exports = {
     description: 'Shows what servers do you share with me',
     category: "utility",
     execute: async (client, config, Discord, target, utils, message, args) => {
-        var servers = client.guilds.filter(g => g.members.has(target.id)).map(a => `\`${a.id}\` | **${a.name}** ${utils.yesNo(a.members.has(config.ownerID) && target !== client.users.get(config.ownerID), "👁", "")}`)
+        var servers = client.guilds.filter(g => g.members.has(target.id)).map(a => `\`${a.id}\` | **${a.name}** ${a.members.has(message.author.id) && target.id !== message.author.id ? "📥" . "")}`)
 
         var page = 1
         var pages = Math.floor(servers.length/10)+1
     
         var embed = new Discord.RichEmbed()
             .setTitle(`So basically I see ${target.username.replace(message.author.username, "you")} in ${servers.length} servers:`)
-            .setDescription(`👁 means my developer is in the server 
-`+servers.slice((page - 1) * 10, (page - 1) * 10 + 10).join("\n"))
+            .setDescription(`${target.id !== message.author.id ? "📥 means they share that server with you\n" : "")}${servers.slice((page - 1) * 10, (page - 1) * 10 + 10).join("\n")}`)
             .setFooter(`Page ${page} of ${pages}`)
 
         message.channel.send(embed).then(msg => {
@@ -37,7 +36,6 @@ module.exports = {
 
                 forwards.on('collect', async r => {
                     if (page == pages) {page = 1} else {page++}    
-
 
                     await embed.setDescription(servers.slice((page - 1) * 10, (page - 1) * 10 + 10).join("\n"))
                     await embed.setFooter(`Page ${page} of ${pages}`)
