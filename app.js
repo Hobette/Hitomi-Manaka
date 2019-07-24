@@ -213,6 +213,14 @@ client.on("message", (message) => {
     }
 
 })
+
+//client.on("guildMemberUpdate")
+
+
+
+
+
+
 //autoresponse and misc stuff
 client.on("message", (message) => {
     if (message.channel.type === 'dm') return;
@@ -243,7 +251,10 @@ client.on("message", (message) => {
         "des": `cito`,
         "despa": `stop`,
         "rawr": `xd`,
-        "thanos car": message.content
+        "thanos car": message.content,
+        "he's quick": `and nimble`,
+        "and quick": `and nimble`,
+        "and nimble": `and quick`
     }
 
     if (triggers[trigger] != undefined && message.guild.me.permissionsIn(message.channel).has("SEND_MESSAGES")) { 
@@ -258,6 +269,9 @@ client.on("message", (message) => {
         */ //i was debugging stuff lol
         message.channel.send(utils.unvaporwave(message.content).replace(/[^a-z]/g, "").length == 0 ? triggers[trigger].toUpperCase() : triggers[trigger])
      }
+     var a = trigger.match(/^(thanks|thank you|ty),?( for nothing|) hitomi *?(manaka|bot|babe|butt|bastard|)$/ig)
+
+     if (a !== null && a[0] === trigger) { message.channel.send("what") }
 
     if (trigger.includes("fix hitomibot")) {
         message.react('473450929895636993');
@@ -266,7 +280,10 @@ client.on("message", (message) => {
         message.react('😍');
     }
     if (trigger.includes("hola")) {
-        message.react('🌊')
+        message.react('🌊');
+    }
+    if (trigger.includes("trans rights")) {
+        message.react('361930686552342538');
     }
 });
 
