@@ -20,13 +20,13 @@ module.exports = {
         if (!displayusers[0]) return message.channel.send("No users were found!")
         if (displayusers.length === 1) return client.commands.get("user").execute(client, config, Discord, displayusers[0], utils, message, args);
 
-        displayusers = displayusers.map(u => `\`${u.id}\` | **${u.tag}** ${utils.yesNo(u.bot, "<:botTag:230105988211015680>", "")} ${utils.yesNo(message.guild.members.has(u.id), "📥", "")}`)
+        displayusers = displayusers.map(u => `\`${u.id}\` | **${u.tag}** ${u.bot ? "<:botTag:230105988211015680>" : "")} ${message.guild.members.has(u.id) ? "📥" : "")}`)
         
         var pages = Math.floor(displayusers.length / 10)+1
         
         var j = new Discord.RichEmbed()
             .setTitle("🔍 Search results ("+displayusers.length+" users found)")
-            .setFooter(`Showing page ${page} of ${pages}. Use the same command again including \"-p (number of page)\" to navigate`)
+            .setFooter(`Showing page ${page} of ${pages}.`)
             .setDescription(`<:botTag:230105988211015680> means a bot
 📥 means they're in this server
 
