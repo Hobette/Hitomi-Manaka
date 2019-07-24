@@ -1,4 +1,5 @@
-# Hitomi-Manaka
+# Hitomi Manaka#4825 
+Multipurpose Discord bot, except it actually has tons of unique commands
 my name jeff
 
 how do i remove commits lol
