@@ -15,8 +15,8 @@ module.exports = {
                 .setAuthor(target.tag + "'s info:", "https://cdn.discordapp.com/attachments/406497072939008001/551082827609931777/enlarge.png")
                 .setThumbnail(user.background_url)
 
-                .setDescription(`*${utils.yesNo(user.title !== "", user.title, "[no title]")}*
-${utils.yesNo(!user.info_box !== "", user.info_box, "[no info]")}`)
+                .setDescription(`*${user.title !== "" ? user.title : "[no title]"}*
+${!user.info_box !== "" ? user.info_box : "[no info]")}`)
                 .addField("General info", `**Level:** ${user.level}
 **Rank:** ${user.rank}
 **Reputation:** ${user.reputation}
