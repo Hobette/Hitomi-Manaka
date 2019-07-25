@@ -16,7 +16,7 @@ module.exports = {
                 .setThumbnail(user.background_url)
 
                 .setDescription(`*${user.title !== "" ? user.title : "[no title]"}*
-${!user.info_box !== "" ? user.info_box : "[no info]")}`)
+${!user.info_box !== "" ? user.info_box : "[no info]"}`)
                 .addField("General info", `**Level:** ${user.level}
 **Rank:** ${user.rank}
 **Reputation:** ${user.reputation}
@@ -48,7 +48,7 @@ ${!user.info_box !== "" ? user.info_box : "[no info]")}`)
             "credits": 1857200, 
             "reputation": 372
         }
-        (for reminder purposes)
+        (for reference purposes)
         */
 
     },
