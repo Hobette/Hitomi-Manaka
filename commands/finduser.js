@@ -44,8 +44,6 @@ module.exports = {
                 const backwards = msg.createReactionCollector(backwardsFilter, { time: 120000 });
                 const forwards = msg.createReactionCollector(forwardsFilter, { time: 120000 });
 
-cd /home/tina/HitomiBot
-node app.js 
                 backwards.on('collect', async r => {
                     if (page === 1) {page = pages} else {page--;}
 
