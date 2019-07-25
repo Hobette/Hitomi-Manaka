@@ -7,7 +7,7 @@ module.exports = {
         utils.eco.FetchBalance(target.id).then(u => {
             let embed = new Discord.RichEmbed()
                 .setTitle(target.username + "'s sapphires:")
-                .setDescription(`**${u.balance}** <:sapphire:525655228444573696> ${u.balance < 0 ? "(uh oh!)" : "")}`)
+                .setDescription(`**${u.balance}** <:sapphire:525655228444573696> ${u.balance < 0 ? "(uh oh!)" : ""}`)
                 .setColor("#8f91e1")
             message.channel.send(embed)
         })
