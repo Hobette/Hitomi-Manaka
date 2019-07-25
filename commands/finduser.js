@@ -20,7 +20,7 @@ module.exports = {
         if (!displayusers[0]) return message.channel.send("No users were found!")
         if (displayusers.length === 1) return client.commands.get("user").execute(client, config, Discord, displayusers[0], utils, message, args);
 
-        displayusers = displayusers.map(u => `\`${u.id}\` | **${u.tag}** ${u.bot ? "<:botTag:230105988211015680>" : "")} ${message.guild.members.has(u.id) ? "📥" : "")}`)
+        displayusers = displayusers.map(u => `\`${u.id}\` | **${u.tag}** ${u.bot ? "<:botTag:230105988211015680>" : ""} ${message.guild.members.has(u.id) ? "📥" : ""}`)
         
         var pages = Math.floor(displayusers.length / 10)+1
         
@@ -44,7 +44,8 @@ module.exports = {
                 const backwards = msg.createReactionCollector(backwardsFilter, { time: 120000 });
                 const forwards = msg.createReactionCollector(forwardsFilter, { time: 120000 });
 
-
+cd /home/tina/HitomiBot
+node app.js 
                 backwards.on('collect', async r => {
                     if (page === 1) {page = pages} else {page--;}
 
