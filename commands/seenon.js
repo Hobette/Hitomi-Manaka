@@ -3,7 +3,7 @@ module.exports = {
     description: 'Shows what servers do you share with me',
     category: "utility",
     execute: async (client, config, Discord, target, utils, message, args) => {
-        var servers = client.guilds.filter(g => g.members.has(target.id)).map(a => `\`${a.id}\` | **${a.name}** ${a.members.has(message.author.id) && target.id !== message.author.id ? "📥" . "")}`)
+        var servers = client.guilds.filter(g => g.members.has(target.id)).map(a => `\`${a.id}\` | **${a.name}** ${a.members.has(message.author.id) && target.id !== message.author.id ? "📥" : ""}`)
 
         var page = 1
         var pages = Math.floor(servers.length/10)+1
