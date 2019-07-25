@@ -8,6 +8,6 @@ module.exports = {
     execute: async (client, config, Discord, target, utils, message, args) => {
         var passwords = utils.fs.readFileSync("./util/random/badpasswords.txt").toString().toLowerCase().split("\n")
         if (!args[0]) return message.channel.send(utils.random(passwords)())
-        message.channel.send(passwords.includes(args[0]) ? "Gratz, you found a banned password.":"That password is not banned on NPM."))
+        message.channel.send(passwords.includes(args[0]) ? "Gratz, you found a banned password.":"That password is not banned on NPM.")
     },
 }
