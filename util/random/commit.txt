@@ -1,1 +1,1 @@
-https://github.com/ngerakines/commitment/blob/master/commit_messages.txt
+All commit messages can be found at https://github.com/ngerakines/commitment/blob/master/commit_messages.txt
