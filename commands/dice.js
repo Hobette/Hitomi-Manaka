@@ -5,9 +5,10 @@ module.exports = {
     insensitive: true,
     category: 'fun',
     execute: async (client, config, Discord, target, utils, message, args) => {
-
-    if (!args[0]) { message.channel.send("Gimmie something to roll...") } else
-        if (args[0].replace(/[0-9d]+/g, "") !== "") { message.channel.send("Wrong syntax, do `hi!help dice` for more help") } else {
+   
+    if (!args[0]) return message.channel.send("Gimmie something to roll...");
+    if (args[0] === "cheese") return message.channel.send("https://twitter.com/DicePom/status/1147996256716746752");
+        if (args[0].replace(/[0-9d]+/g, "") !== "") return  message.channel.send("Wrong syntax, do `hi!help dice` for more help")
         if (args[0].match(/[0-9]+d[0-9]+/) == null) { args[0]= "1d" + args[0]}
 
         var dice = args[0].split("d")[0]
@@ -25,6 +26,6 @@ module.exports = {
         }
 
         message.channel.send(roll(dice, sides))
-        }
+        
     },
 }
