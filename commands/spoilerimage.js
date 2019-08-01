@@ -4,19 +4,19 @@ module.exports = {
     category: 'utility',
     execute: async (client, config, Discord, target, utils, message, args) => {
         message.channel.fetchMessages()
- .then(async e => {
- var o = e.filter(m => m.attachments.size > 0).first()
- if (o == undefined) return message.channel.send("There's no images to grab!")
- o = o.attachments.first()
-if (o.filename.startsWith("SPOILER")) {
-var a = new Discord.Attachment(o.url, o.filename.replace("SPOILER", ""))
- message.channel.send("Here's your unspoilered image!", a) .catch(e=>message.channel.send("error: "+e))
-} else {
- var a = new Discord.Attachment(o.url, "SPOILER_"+o.filename)
- message.channel.send("Here's your spoilered image!", a) .catch(e=>message.channel.send("error: "+e))
-}
+            .then(async e => {
+                var o = e.filter(m => m.attachments.size > 0).first()
+                if (o == undefined) return message.channel.send("There's no images to grab!")
+                o = o.attachments.first()
+                if (o.filename.startsWith("SPOILER")) {
+                    var a = new Discord.Attachment(o.url, o.filename.replace("SPOILER", ""))
+                    message.channel.send("Here's your unspoilered image!", a).catch(e => message.channel.send("error: " + e))
+                } else {
+                    var a = new Discord.Attachment(o.url, "SPOILER_" + o.filename)
+                    message.channel.send("Here's your spoilered image!", a).catch(e => message.channel.send("error: " + e))
+                }
 
 
-}).catch(e=>message.channel.send("error: "+e))
+            }).catch(e => message.channel.send("error: " + e))
     },
 }
