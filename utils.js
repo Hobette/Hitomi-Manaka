@@ -8,7 +8,7 @@ module.exports = {
 
     //Other stuff
     racistRegex: /nig(g|)(a|er)|fag(|got|ger|git)|kys|trann(y|ies)/gi,
-    inviteRegex: /discord.gg\/[0-9A-Za-z]+/g,
+    inviteRegex: /http:\/\/|https:\/\/)?(?:discord(?:(?:.|.?dot.?)(?:gg|me|li|to|link)|app(?:.|.?dot.?)com\/invite)|(invite|disco)(?:.|.?dot.?)gg)\/[\da-z]+/,
     idRegex: /[^0-9]/g,
 
     //functions
@@ -81,7 +81,7 @@ module.exports = {
         })
     },
   
-    embedImage(zelda) { //lol memes
+    embedImage(zelda) {
         const Discord = require("discord.js")
         var embed = new Discord.RichEmbed()
             .setImage(zelda) 
@@ -97,5 +97,5 @@ module.exports = {
         var g = (Math.round(Math.random()* 127) + 127).toString(16);
         var b = (Math.round(Math.random()* 127) + 127).toString(16);
         return '#' + r + g + b;
-    },    
+    }     
 }
