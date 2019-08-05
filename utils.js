@@ -8,7 +8,7 @@ module.exports = {
 
     //Other stuff
     racistRegex: /nig(g|)(a|er)|fag(|got|ger|git)|kys|trann(y|ies)/gi,
-    inviteRegex: /http:\/\/|https:\/\/)?(?:discord(?:(?:.|.?dot.?)(?:gg|me|li|to|link)|app(?:.|.?dot.?)com\/invite)|(invite|disco)(?:.|.?dot.?)gg)\/[\da-z]+/,
+    inviteRegex: /(http:\/\/|https:\/\/)?(?:discord(?:(?:.|.?dot.?)(?:gg|me|li|to|link)|app(?:.|.?dot.?)com\/invite)|(invite|disco)(?:.|.?dot.?)gg)\/[\da-z]+/,
     idRegex: /[^0-9]/g,
 
     //functions
