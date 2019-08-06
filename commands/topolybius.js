@@ -2,6 +2,7 @@ module.exports = {
     name: 'topolybius',
     aliases: ['topb'],
     description: 'Translates into polybius square cypher',
+    usage: "(text)",
     category: 'text',
     execute: async (client, config, Discord, target, utils, message, args) => {
         var text = args.join(" ").toLowerCase().replace(/[^a-z ]+/g, "").split("")
