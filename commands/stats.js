@@ -32,7 +32,7 @@ Uptime: \`${uptime}\`
 Commands: \`${client.commands.array().length}\`
 Number of prefixes: \`${require("../util/data holders/prefixes.json").length}\``, true)
         .addField("Responses and other stuff", 
-`Pictures in **hi!hitomi:** \`${require("../util/random/hitomi.json").length}\`
+`Pictures in **hi!hitomi:** \`${utils.fs.readFileSync("./util/random/hitomi.txt").toString().split("\n").length}\`
 Genders in **hi!gender:** \`${require("../util/random/genders.json").length}\`
 Sexualities in **hi!sexuality:** \`${require("../util/random/sexualities.json").length}\`
 Responses in **hi!ping**: \`${require("../util/random/ping.json").length}\` 
