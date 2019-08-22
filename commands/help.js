@@ -3,8 +3,8 @@ module.exports = {
     aliases: ['?'],
     description: 'What',
     category: "general",
-    insensitive: true,
-    usage: '(command name or none to show list)',
+    insensitive: true, //If you are reading this from github please dm me "slime rancher best game"
+    usage: '(command name)',
     execute: async (client, config, Discord, target, utils, message, args) => {
         if (utils.settings[message.guild.id].kitchenSinkMode === true) return message.channel.send("Help yourself.")
         
@@ -47,7 +47,7 @@ module.exports = {
         let prefix = utils.checkCommand(message.content, "prefix")
 
         if (!args[0]) {
-            const embed = new Discord.RichEmbed() 
+            const embed = new Discord.RichEmbed()
                 .setAuthor(`All commands (${client.commands.size - hsecret.length})`)
                 .setDescription("Run `hi!help [command]` to see more info about it!")
                 .addField(`Owner (${howner.length})`, `${howner.join("\n")}`, true)
@@ -61,6 +61,7 @@ module.exports = {
                 .addField(`* Discord Bots (${hdbots.length})`, `${hdbots.join("\n")}`, true)
                 .addField(`* LGTBQ+ Lounge REBORN (${hgay.length})`, `${hgay.join("\n")}`, true)
                 .addField(`No category (${nocat.length})`, `${nocat.join("\n")}`, true)
+		.addField('\u200B', "There might be some features from me that can be annoying, but if you don't like them, **please consider using `hi!settings` to disable them instead of kicking me.** Thanks.\nAlso don't doubt on visiting my support server (use `hi!support`) if you need more help or want to stay updated about me!")
                 .setFooter("*: guild specific commands");
 
              message.author.send( embed ).then(() =>
@@ -69,22 +70,15 @@ module.exports = {
                    message.channel.send("Enable your DMs first, nerd")
                )
 
-        } else /*
-            
-            
-            [redactaded]
-            
-             */
+            //easter eggs
 
+        } else 
+            
         if (args[0] === 'yourself') {
             var ks = new Discord.RichEmbed()
                 .setImage('https://cdn.discordapp.com/attachments/461509407839092736/497770004327170058/unknown.png')
             message.channel.send(ks)
         } else
-
-        /*
-        [RDACETED]
-        */
 
 
             if (args[0] === 'easter' && args[1] === 'egg') {
@@ -102,12 +96,13 @@ module.exports = {
                 .setTitle(`All unfinished commands (${wipcat.length})`)
                 .setFooter("Only my dev can use these")
                 .setDescription(wipcat.join("\n"))
-            message.author.send({ embed }).then(() =>
-                message.channel.send("Sent you the list of secret commands, handle it with care")
+            message.author.send("You can't use these commands btw", { embed }).then(() =>
+                message.channel.send("Sent you the list of unfinished commands, handle it with care")
             )
         }
 
         else {
+            
         var name = args[0].toLowerCase();
         var command = client.commands.get(name) || client.commands.find(c => c.aliases && c.aliases.includes(name));
 
