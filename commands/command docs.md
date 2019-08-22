@@ -1,18 +1,20 @@
 So basically 
 ## name: 'name' 
-~~my name jeff~~ Name of the command. Doesn't have to be the same as the file name (obligatory)
-## aliases: ['my','name','jeff'] 
+~~my name jeff~~ Name of the command. Doesn't have to be the same as the file name buuuut should be to avoid confusion (obligatory)
+
+## aliases: ['alias1', 'alias2', 'etc'] 
 All the aliases that can be used. Must be an array (optional)
-## description: 'cool command yes'
+
+## description: 'description'
 Self descripive (optional)
-## usage: '[@everyone]'
-How to use the command. Note that the name of the command isn't on the usage string because it already appears when you see the help command for it (like
-- **usage: "blablabla"**
-and then in the help command:
-- **Usage: hi!command blablabla**
+
+## usage: 'usage'
+How to use the command. Writing the name of the command is not necessary. Better explained, if you write "memes" in the usage text of a command, the help message for that command will display `(prefix you used)(command) memes`
+
 ## category: 'meme'
-The category for the command. If the category isn't "owner", "general", "utility", "fun", "economy", "text", "meme", "mod","dbots", "lgtb", "wip" or "easter egg", the command will be automatically put in the no categorized commands in hi!help. Commands with "owner"/"wip" categories are already restricted to me and so are commands with "lgtb" and "dbots" for the respective servers they represent, so if you don't see any **if (message.author.id)** thing on them, you now know why (obligatory)
+The category for the command. Avaiable categories are `owner`, `general`, `utility`, `fun`, `economy`, `text`, `meme`, `mod`, `dbots`, `lgtb`, `wip` and `easter egg`. Writing anything else or leaving the category in blank will cause the command to belong in the list of commands with no category in `hi!help`. Commands marked as `owner` or `wip` can only be usable by me, and commands marked as `lgtb` or `dbots` can only be used in the LGTBQ+ Lounge Reborn!!! (348937971409485857) and Discord Bots (110373943822540800) servers, respectively. Commands marked as `easter egg` and `wip` are hidden in the help command (obligatory)
+
 ## insensitive: true
 Makes args lowercase (args[0].toLowercase() can gib error if there's no args!!!!!!!) (optional)
 
-All optional stuff can be removed from the file if desired
+All optional stuff can be removed from the command's code (or left in blank) if desired
