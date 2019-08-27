@@ -6,7 +6,7 @@ module.exports = {
     execute: async (client, config, Discord, target, utils, message, args) => {
         if (!args[0]) return message.channel.send("You need to bet *something!*")
         var bet = parseInt(args[0]);
-        if (`${bet}` === 'NaN') return message.channel.send("You need to gamble a *number* of diamonds, nerd")
+        if (`${bet}` === 'NaN') return message.channel.send("You need to gamble a *number* of sapphires, nerd")
         if (bet < 0) return message.channel.send("You... You can't gamble negative sapphires...")
         var player = await utils.eco.FetchBalance(message.author.id);
         if (player.balance < bet) return message.channel.send('You have less sapphires than the amount you want to waste on me!');
