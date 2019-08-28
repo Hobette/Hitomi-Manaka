@@ -4,22 +4,23 @@ module.exports = {
     usage: "[optional: user ID/mention]",
     category: 'economy',
     execute: async (client, config, Discord, target, utils, message, args) => {
+        if (target.bot) return message.channel.send("imagine using this command on a bot")
         if (!args[0]) {
-        //Searches for the top 3 and outputs it to the user.
-        var users = await utils.eco.Leaderboard({
-            limit: 10
-        })
+            //Searches for the top 3 and outputs it to the user.
+            var users = await utils.eco.Leaderboard({
+                limit: 10
+            })
 
-        var first = await client.fetchUser(users[0].userid) 
-        var second = await client.fetchUser(users[1].userid)
-        var third = await client.fetchUser(users[2].userid) 
-        var fourth = await client.fetchUser(users[3].userid) 
-        var fifth = await client.fetchUser(users[4].userid) 
-        var sixth = await client.fetchUser(users[5].userid)
-        var seventh = await client.fetchUser(users[6].userid) 
-        var eighth = await client.fetchUser(users[7].userid) 
-        var ninth = await client.fetchUser(users[8].userid) 
-        var tenth = await client.fetchUser(users[9].userid) 
+            var first = await client.fetchUser(users[0].userid)
+            var second = await client.fetchUser(users[1].userid)
+            var third = await client.fetchUser(users[2].userid)
+            var fourth = await client.fetchUser(users[3].userid)
+            var fifth = await client.fetchUser(users[4].userid)
+            var sixth = await client.fetchUser(users[5].userid)
+            var seventh = await client.fetchUser(users[6].userid)
+            var eighth = await client.fetchUser(users[7].userid)
+            var ninth = await client.fetchUser(users[8].userid)
+            var tenth = await client.fetchUser(users[9].userid)
 
             const embed = new Discord.RichEmbed()
                 .setTitle("Top 10 users")
@@ -35,23 +36,14 @@ module.exports = {
 [\`8\`] **${users[7].balance}<:sapphire:525655228444573696>** ~ ${client.users.get(eighth.id).tag}
 [\`9\`] **${users[8].balance}<:sapphire:525655228444573696>** ~ ${client.users.get(ninth.id).tag}
 [\`💩\`] **${users[9].balance}<:sapphire:525655228444573696>** ~ ${client.users.get(tenth.id).tag}`)
-                message.channel.send(embed)
+            message.channel.send(embed)
         } else {
-            if (target == message.author) {
-                utils.eco.Leaderboard({
-                    search: message.author.id
-                  }).then(output => {
-                  message.channel.send(`You're the number **${output}** on my leaderboard!`);
-                  })
-            } else {
-                utils.eco.Leaderboard({
-                    search: client.fetchUser(args[0].replace(/[^0-9]/g, ""))
-                  }).then(output => {
-                  message.channel.send(`The user \`${message.mentions.users.first().tag}\` is number **${output}** on my leaderboard!`);
-                  })
-            }
-
-        } 
+            utils.eco.Leaderboard({
+                search: target.id
+            }).then(output => {
+                message.channel.send(`${target.id === message.author.id ? 'You are' : `The user \`${target.tag}\` is number`} **${output}** on my leaderboard!`);
+            })
+        }
 
 
     },
