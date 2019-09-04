@@ -23,7 +23,7 @@ module.exports = {
                     colorembed(rawColor)
                 } else
                 if (!message.guild.members.has(target.id)) { message.channel.send("Do you want me to show the role of an user that is not here?") }
-                else colorembed(message.guild.members.get(target.id).highestRole.hexColor)
+                else colorembed(message.guild.members.get(target.id).colorRole.hexColor)
             } else
             colorembed(args[0])
         }
