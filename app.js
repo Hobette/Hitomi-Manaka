@@ -21,13 +21,16 @@ const config = require("./config.json");
 var blacklist = require("./util/data holders/blacklist.js")
 
 function randgame() {
-    /*
-            var games = utils.fs.readFileSync("./util/random/games.txt").toString().split("\n")
-            var playgame = games[Math.floor(Math.random() * games.length)]
-            client.user.setActivity(`${playgame} | hi!help | In ${client.guilds.size} servers with ${client.users.size} amazing people.`);
-    */
-    var playgame = utils.random(require("./util/data holders/siivagunner.json").map(e => e.name.slice(5)))()
-    client.user.setActivity(`${playgame} | hi!help | In ${client.guilds.size} servers with ${client.users.size} amazing people.`, { type: "LISTENING" })
+    let status = ` | hi!help | In ${client.guilds.size} servers with ${client.users.size} amazing people.`
+
+    let e = new Date()
+
+    if (!e.getMonth() && !e.getDay)             return client.user.setActivity("Happy new year wahoo"+status)
+    if (e.getMonth() == 5 && e.getDay() == 13)  return client.user.setActivity("Happy birthday Tina!"+status)
+    if (e.getMonth() == 5)                      return client.user.setActivity("Trans rights!"+status)
+    if (e.getMonth() == 8)                      return client.user.setActivity("覚えていますか、9月21日夜？"+status)
+
+    return client.user.setActivity(utils.random(require("./util/data holders/siivagunner.json").map(e => e.name.slice(6)))()+status, { type: "LISTENING" })
 }
 client.on("ready", () => {
     console.log(`
@@ -115,6 +118,9 @@ client.on("guildMemberAdd", member => {
 client.on("message", async (message) => {
     if (message.channel.type === 'dm') return;
     if (blacklist.guilds.includes(message.guild.id)) return message.guild.leave()
+
+    if (message.content == "<@431495393520386068>" || message.content == "<@!431495393520386068>") return message.channel.send("Yes hello it me use `hi!prefix` to get the list of prefixes")
+
     var prefix = utils.checkCommand(message.content, "prefix")
 
     if (!utils.checkCommand(message.content, true) || message.author.bot) return undefined;
