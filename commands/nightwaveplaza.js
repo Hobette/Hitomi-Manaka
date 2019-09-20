@@ -24,14 +24,8 @@ module.exports = {
         }
         */
         
-        function vaporwavecolor(){
-            var r = (Math.round(Math.random()* 127) + 127).toString(16);
-            var g = (Math.round(Math.random()* 127) + 127).toString(16);
-            var b = (Math.round(Math.random()* 127) + 127).toString(16);
-            return '#' + r + g + b;
-        }
         
-        utils.get(" https://api.plaza.one/status", {
+        utils.get("https://api.plaza.one/status", {
         }).then((response) => {
   return response.json();
 }).then((response) => {
@@ -58,13 +52,13 @@ module.exports = {
                 const Embed = new Discord.RichEmbed()
                 .setAuthor("Ｎｉｇｈｔｗａｖｅ　Ｐｌａｚａ 🌙", "https://img7.androidappsapk.co/300/1/c/7/one.plaza.nightwaveplaza.png", "https://plaza.one/")
                 .setDescription("**Now playing: **" + response.playback.title + ` \`(${passedminutes}:${passedseconds}/${minutes}:${seconds})\`
-(ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ᴇᴍʙᴇᴅ ᴛɪᴛʟᴇ ᴛᴏ ʟɪsᴛᴇɴ ᴛᴏ ɪᴛ!)`)
+(use ${message.context.command} cover to get the album cover)`)
                 .addField("Artist", response.playback.artist,true)
-                .addField("Album (ʜɪ!ɴɪɢʜᴛᴡᴀᴠᴇᴘʟᴀᴢᴀ ᴄᴏᴠᴇʀ)", response.playback.album,true)
-                .setThumbnail("http://plaza.one/" + response.playback.artwork)
+                .addField("Album", response.playback.album+"​",true)
+	       .setThumbnail("http://plaza.one/" + response.playback.artwork)
                 .setURL("http://plaza.one/")
                 .setFooter(`👍 ${response.playback.likes} | 👎 ${response.playback.hates} | ${response.listeners} listeners`)
-                .setColor(vaporwavecolor())
+                .setColor(utils.vaporwavecolor())
                 
                 message.channel.send(Embed);
             }
