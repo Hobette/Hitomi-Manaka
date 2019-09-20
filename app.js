@@ -25,8 +25,9 @@ function randgame() {
 
     let e = new Date()
 
-    if (!e.getMonth() && !e.getDay)             return client.user.setActivity("Happy new year wahoo"+status)
-    if (e.getMonth() == 5 && e.getDay() == 13)  return client.user.setActivity("Happy birthday Tina!"+status)
+    if (!e.getMonth() && !e.getDate)             return client.user.setActivity("Happy new year wahoo"+status)
+    if (e.getMonth() == 5 && e.getDate() == 14)  return client.user.setActivity("Happy birthday Tina!"+status)
+    if (e.getMonth() == 8 && e.getDate() == 19)  return client.user.setActivity(`Ahoy! | hi!help | in ${client.guilds.size} serverrs wi' ${client.users.size} amazin' people, avast.`)
     if (e.getMonth() == 5)                      return client.user.setActivity("Trans rights!"+status)
     if (e.getMonth() == 8)                      return client.user.setActivity("覚えていますか、9月21日夜？"+status)
 
@@ -99,52 +100,39 @@ client.on("messageDelete", (message) => {
     if (msg == "") return;
     snipes[`${message.channel.id}`] = [`${msg}`, `${message.author.id}`, `${hh}`]
 
-    var fs = require('fs');
     var fileName = './util/data holders/snipe.json';
-    fs.writeFile(fileName, JSON.stringify(snipes, null, 2), function (error) {
+    utils.fs.writeFile(fileName, JSON.stringify(snipes, null, 2), function (error) {
         if (error) {
             return console.log(error)
         }
     })
 });
 
-client.on("guildMemberAdd", member => {
-    if (utils.settings[member.guild.id].botRole === 'none') return;
-    if (!member.user.bot) return;
-    if (!member.guild.me.hasPermission("MANAGE_ROLES")) return member.guild.me.lastMessage.channel.send("This guild has `botRole` enabled, but I'm missing permissions to manage roles. Please ping a staff member if you see this message.")
-    member.addRoles([utils.settings[member.guild.id].botRole], "botRole is enabled.").catch((error) => member.guild.me.lastMessage.channel.send("Something happened while adding the role to the bot: " + error))
-})
-
 client.on("message", async (message) => {
-    if (message.channel.type === 'dm') return;
+    if (message.channel.type === 'dm' || message.author.bot) return;
+
     if (blacklist.guilds.includes(message.guild.id)) return message.guild.leave()
+    if (blacklist.users.includes(message.author.id) || blacklist.guilds.includes(message.guild.id)) return;
 
     if (message.content == "<@431495393520386068>" || message.content == "<@!431495393520386068>") return message.channel.send("Yes hello it me use `hi!prefix` to get the list of prefixes")
 
-    var prefix = utils.checkCommand(message.content, "prefix")
+    message.context = utils.checkCommand(message.content)
+    if (!message.context) return
 
-    if (!utils.checkCommand(message.content, true) || message.author.bot) return undefined;
+    var args = message.context.args
 
-    if (blacklist.users.includes(message.author.id) || blacklist.guilds.includes(message.guild.id)) return undefined;
-
-
-    var args = utils.checkCommand(message.content, "args")
-    var commandName = utils.checkCommand(message.content, "name")
-
-    var target
-    if (!args[0]) { target = message.author } else {
-	
+    var target = message.author
+    if (args.length > 0) {
         if (client.users.get(args[0].replace(/[^0-9]/g, "")) !== undefined) { target = client.users.get(args[0].replace(/[^0-9]/g, "")); } else
         if (args[0] === "@someone") { target = message.guild.members.random().user } else
 
-            if (message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' ')))) !== null) {
-                target = message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' '))));
-                target = target.user
-            } else { target = message.author }
+        if (message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' ')))) !== null) {
+            target = message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' '))));
+        } 
     }
 
-    const command = client.commands.get(commandName)
-        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+    const command = client.commands.get(message.context.name)
+        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(message.context.name));
     if (!command) return;
 
     if (command.category === 'dbots' && message.guild.id !== '110373943822540800') return;
@@ -196,7 +184,6 @@ ${attachments}`)
 
 client.on("message", (message) => {
     if (message.channel.type === 'dm') return;
-    var utils = require("./utils.js")
     var trigger = utils.unvaporwave(message.content.toLowerCase())
 
     if (message.channel.id === "425796981999403032" && (
@@ -230,7 +217,7 @@ client.on("message", (message) => {
 //autoresponse and misc stuff
 client.on("message", (message) => {
     if (message.channel.type === 'dm') return;
-    var utils = require("./utils.js")
+
     var trigger = utils.unvaporwave(message.content.toLowerCase())
 
 
