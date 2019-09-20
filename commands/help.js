@@ -3,8 +3,8 @@ module.exports = {
     aliases: ['?'],
     description: 'What',
     category: "general",
-    insensitive: true, //If you are reading this from github please dm me "slime rancher best game"
-    usage: '(command name)',
+    insensitive: true,
+    usage: '(command name or none to show list)',
     execute: async (client, config, Discord, target, utils, message, args) => {
         if (utils.settings[message.guild.id].kitchenSinkMode === true) return message.channel.send("Help yourself.")
         
@@ -17,6 +17,7 @@ module.exports = {
             "text",
             "meme",
             "mod",
+            "weeb",
             "dbots",
             "lgtb",
             "easter egg",
@@ -39,12 +40,11 @@ module.exports = {
         var hmod = getsomehelp("mod")
         var hdbots = getsomehelp("dbots")
         var hgay = getsomehelp("lgtb")
+        var hweeb = getsomehelp("weeb")
         var hsecret = getsomehelp("easter egg")
-        var nocat = getsomehelp(false)
         var wipcat = getsomehelp("wip")
+        var nocat = getsomehelp(false)
         //this generates a list of commands with their categories. It's similar to Tony Bamanaboni's help command
-        
-        let prefix = utils.checkCommand(message.content, "prefix")
 
         if (!args[0]) {
             const embed = new Discord.RichEmbed()
@@ -57,6 +57,7 @@ module.exports = {
                 .addField(`Economy (${heconomy.length})`, `${heconomy.join("\n")}`, true)
                 .addField(`Text (${htext.length})`, `${htext.join("\n")}`, true)
                 .addField(`Meme (${hmeme.length})`, `${hmeme.join("\n")}`, true)
+                .addField(`Weeb (${hweeb.length})`, `${hweeb.join("\n")}`, true)
                 .addField(`Mod (${hmod.length})`, `${hmod.join("\n")}`, true)
                 .addField(`* Discord Bots (${hdbots.length})`, `${hdbots.join("\n")}`, true)
                 .addField(`* LGTBQ+ Lounge REBORN (${hgay.length})`, `${hgay.join("\n")}`, true)
@@ -72,16 +73,9 @@ module.exports = {
 
             //easter eggs
 
-        } else 
-            
-        if (args[0] === 'yourself') {
-            var ks = new Discord.RichEmbed()
-                .setImage('https://cdn.discordapp.com/attachments/461509407839092736/497770004327170058/unknown.png')
-            message.channel.send(ks)
         } else
-
-
-            if (args[0] === 'easter' && args[1] === 'egg') {
+		
+        if (args[0] === 'easter' && args[1] === 'egg') {
                 if (message.author.id === config.ownerID) {
                     const embed = new Discord.RichEmbed()
                         .setTitle(`All easter egg commands (${hsecret.length})`)
@@ -91,6 +85,7 @@ module.exports = {
                     )
                 }
         } else 
+		
         if (args[0] === 'wip') {
             const embed = new Discord.RichEmbed()
                 .setTitle(`All unfinished commands (${wipcat.length})`)
@@ -102,8 +97,7 @@ module.exports = {
         }
 
         else {
-            
-        var name = args[0].toLowerCase();
+        var name = args[0]
         var command = client.commands.get(name) || client.commands.find(c => c.aliases && c.aliases.includes(name));
 
         if (!command) {
@@ -121,7 +115,7 @@ module.exports = {
         ccat = utils.firstLetterUppercase(ccat)
 
         const embed = new Discord.RichEmbed()
-            .setTitle(prefix + command.name, true)
+            .setTitle(message.context.prefix + command.name, true)
             .setDescription(command.description, true)
             .addField("Usage:", cusage, true)
             .addField("Aliases:", calias, true)
