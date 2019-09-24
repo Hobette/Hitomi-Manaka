@@ -109,7 +109,7 @@ module.exports = {
         var ccat = "None"
 
         if (command.aliases !== undefined) { calias = (`${command.aliases.join(', ')}`) }
-        if (command.usage !== undefined) { cusage = (`${prefix}${command.name} ${command.usage}`) }
+        if (command.usage !== undefined) { cusage = (`${message.context.prefix}${command.name} ${command.usage}`) }
         if (categories.includes(command.category)) { ccat = command.category }
 
         ccat = utils.firstLetterUppercase(ccat)
