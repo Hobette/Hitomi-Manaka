@@ -60,6 +60,7 @@ module.exports = {
                 name: commandName, //will display the command name OR the alias used (if any)
                 command: prefix+commandName, //not only displays the command's name, but also the used prefix
                 victims: [...new Set(victims)],
+                prefix,
                 reason
             } 
 
