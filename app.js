@@ -22,7 +22,6 @@ var blacklist = require("./util/data holders/blacklist.js")
 
 function randgame() {
     let status = ` | hi!help | In ${client.guilds.size} servers with ${client.users.size} amazing people.`
-
     let e = new Date()
 
     if (!e.getMonth() && !e.getDate)             return client.user.setActivity("Happy new year wahoo"+status)
@@ -88,7 +87,7 @@ client.on("guildCreate", guild => {
 })
 //Snipe event
 client.on("messageDelete", (message) => {
-    if (message.channel.type === 'dm' || message.author.bot || message.system || utils.checkCommand(message.content, "name") === "snipe" ||  utils.checkCommand(message.content, "name") === "confess") return;
+    if (message.channel.type === 'dm' || message.author.bot || message.system || utils.checkCommand(message.content, "name") === "snipe" || utils.checkCommand(message.content, "name") === "confess" ||  utils.checkCommand(message.content, "name") === "confessreply") return;
 
     var snipes = require("./util/data holders/snipe.json")
     var msg = message.content.replace(/discord.gg\/[0-9A-Za-z]+/g, "[BAD SERVER]")
@@ -126,14 +125,15 @@ client.on("message", async (message) => {
         if (client.users.get(args[0].replace(/[^0-9]/g, "")) !== undefined) { target = client.users.get(args[0].replace(/[^0-9]/g, "")); } else
         if (args[0] === "@someone") { target = message.guild.members.random().user } else
 
-        if (message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' ')))) !== null) {
-            target = message.guild.members.find(g => g.user.tag.toLowerCase().includes(utils.unvaporwave(args.join(' '))));
+        if (message.guild.members.find(g => g.user.tag.toLowerCase().includes(args.join(" "))) !== null) {
+            target = message.guild.members.find(g => g.user.tag.toLowerCase().includes(args.join(" "))).user;
         } 
     }
 
     const command = client.commands.get(message.context.name)
         || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(message.context.name));
     if (!command) return;
+
 
     if (command.category === 'dbots' && message.guild.id !== '110373943822540800') return;
     if (command.category === 'lgtb' && message.guild.id !== '348937971409485857') return;
@@ -154,6 +154,7 @@ client.on("message", async (message) => {
 
     command.execute(client, config, Discord, target, utils, message, args)
         .catch((error) => {
+            console.log(error)
             message.channel.send(`\`Beep boop error!\`
 \`\`\`xl\n${error}\`\`\`Please report this error to my dev either using \`hi!feedback\`, joining my support server or DMing me.`);
         })
@@ -182,54 +183,28 @@ ${attachments}`)
     }
 })
 
-client.on("message", (message) => {
-    if (message.channel.type === 'dm') return;
-    var trigger = utils.unvaporwave(message.content.toLowerCase())
-
-    if (message.channel.id === "425796981999403032" && (
-        trigger.includes("verify") ||
-        trigger.includes(".iam") ||
-        trigger.includes("?role")
-    ) && message.member.roles.has("350261118511611914")) {
-        message.reply("that's not how it works! You need to see the roles at <#349120132674748418> and ping a moderator or a verification helper in order to tell them the roles you want so they can verify you. One of these roles must be a sexuality, these are at the top of the channel (and yes, your *actual* sexuality, although you can also keep it as a secret or say you're unsure. Or that you just don't label yourself)")
-    }
-
-    if (trigger.includes("owned")) {
-        if (message.channel.parent !== null && message.channel.parent.id === '435875849670098944') return;
-        var owned = message.guild.channels.find(e => e.name === "owned-logs")
-        if (owned !== null && message.channel !== owned) return owned.send(`***${message.author.tag}*** OWNED!!!!!!!!!!!!!!!!!!`)
-    }//OWNED!!!!!!!!!!!!!
-
-    if (utils.settings[message.guild.id].nWordTaxes === true && !message.author.bot) {
-        var raciststuff = trigger.match(utils.racistRegex)
-        if (raciststuff !== null) return utils.eco.SubstractFromBalance(message.author.id, 15)
-    }
-
-})
-
-//client.on("guildMemberUpdate")
-
-
-
-
-
 
 //autoresponse and misc stuff
 client.on("message", (message) => {
-    if (message.channel.type === 'dm') return;
+    if (message.channel.type === 'dm' || message.author.bot) return;
 
     var trigger = utils.unvaporwave(message.content.toLowerCase())
-
-
-
-    if (message.author.bot) return;
-    if (utils.settings[message.guild.id].disableAutoresponses === true) return;
-    if (message.channel.topic != null && message.channel.topic.includes("{shut up, hitomi}")) return;
-
     //allows vaporwave in autoresponses
 
+    if (utils.settings[message.guild.id].nWordTaxes === true) {
+        var raciststuff = trigger.match(utils.racistRegex)
+        if (raciststuff !== null) return utils.eco.SubtractFromBalance(message.author.id, 15)
+    }
+    
+    if (utils.settings[message.guild.id].disableAutoresponses === true || (message.channel.topic != null && message.channel.topic.includes("{shut up, hitomi}"))) return;
 
-    if (message.guild.id === "110373943822540800" || message.guild.id === "450100127256936458") return; //Discord Bots and Discord Bot List (.com)
+        if (message.channel.id === "425796981999403032" && (
+            trigger.includes("verify") ||
+            trigger.includes(".iam") ||
+            trigger.includes("?role")
+        ) && message.member.roles.has("350261118511611914")) {
+            message.reply("that's not how it works! You need to see the roles at <#349120132674748418> and ping a moderator or a verification helper in order to tell them the roles you want so they can verify you. One of these roles must be a sexuality, these are at the top of the channel (and yes, your *actual* sexuality, although you can also keep it as a secret or say you're unsure. Or that you just don't label yourself)")
+        }
 
     if (message.content.startsWith("t!") && message.content.toLowerCase().startsWith("t!daily")) {
         message.channel.send(message.guild.members.has("172002275412279296") ? "Hello <@172002275412279296>" : message.channel.send("what"))
