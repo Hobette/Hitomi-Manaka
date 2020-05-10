@@ -188,8 +188,10 @@ ${attachments}`)
 client.on("message", (message) => {
     if (message.channel.type === 'dm' || message.author.bot) return;
 
-    var trigger = utils.unvaporwave(message.content.toLowerCase())
-    //allows vaporwave in autoresponses
+    var trigger = message.content.toLowerCase()
+
+    if (trigger.split("").filter(t => utils.vaportext.includes(t)) !== []) { text = this.unvaporwave(text) }
+    //allows the usage of vaporwave letters in autoresponses, but only executes the unvaporwave function if the message contains any 
 
     if (utils.settings[message.guild.id].nWordTaxes === true) {
         var raciststuff = trigger.match(utils.racistRegex)
