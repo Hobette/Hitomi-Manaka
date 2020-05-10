@@ -15,6 +15,11 @@ module.exports = {
                 m = m.replace("!", randomEmote[Math.floor(Math.random() * randomEmote.length)]);
             }
         }
+        
+        if(m.length > 2000) {
+            return message.channel.send("The message is too wawge fow Discowd OnO")
+        };
+        
         message.channel.send(`\`\`\`${m}\`\`\``)
     },
 }
