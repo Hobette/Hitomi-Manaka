@@ -19,14 +19,16 @@ module.exports = {
     inviteRegex: /(http:\/\/|https:\/\/)?(?:discord(?:(?:.|.?dot.?)(?:gg|me|li|to|link)|app(?:.|.?dot.?)com\/invite)|(invite|disco)(?:.|.?dot.?)gg)\/[\da-z]+/,
     idRegex: /[^0-9]/g,
 
+    //text
+    normaltext: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789.?!,:;\"'-_+%=$*(){}[]<>|/~\\@&%£#".split(''),
+    vaportext: "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ　０１２３４５６７８９．？！，：；＂＇－＿＋％＝＄＊（）｛｝［］＜＞｜／～＼＠＆％￡＃".split(''),
+
     //functions
     unvaporwave(text) {
         try {
             if (typeof text !== "string") { throw "(text) must be a string, nerd" }
-            var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789.?!,:;\"'-_+%=$*(){}[]<>|/~\\@&%£#"
-                letters = letters.split('')
-            var wp = "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ　０１２３４５６７８９．？！，：；＂＇－＿＋％＝＄＊（）｛｝［］＜＞｜／～＼＠＆％￡＃"
-                wp = wp.split('')
+            var letters = this.normaltext
+            var wp = this.vaportext
             return text.split('').map(i => wp.includes(i) ? letters[wp.indexOf(i)] : i).join("")
         } catch (error) { console.log(error) }
     },
@@ -37,10 +39,11 @@ module.exports = {
 
     checkCommand(text) {
         try {
-            text = this.unvaporwave(text)
-
-
             if (typeof text !== "string") { throw "Both text and output must be strings" }
+
+            if (text.split("").filter(t => this.vaportext.includes(t)) !== []) { text = this.unvaporwave(text) }
+            //allows usage of vaporwave letters in autoresponses, but only executes the unvaporwave function if the message contains any 
+
             let prefix = false;
             for (const thisPrefix of prefixes) {
                 if (this.unemojify(text.toLowerCase()).startsWith(thisPrefix)) prefix = thisPrefix;
@@ -52,27 +55,36 @@ module.exports = {
             var commandName = this.unemojify(args.shift().toLowerCase());
  
             
-            var victims = args.concat("").map(a => a.replace(/[^0-9]+/g, ""))
-            victims = victims.slice(0, victims.indexOf(""))
-            var reason = args.slice(victims.length, args.length).join(" ")
 
             return {
                 args,
                 name: commandName, //will display the command name OR the alias used (if any)
-                command: prefix+commandName, //not only displays the command's name, but also the used prefix
-                victims: [...new Set(victims)],
                 prefix,
-                reason
+                command: prefix+commandName, //not only displays the command's name, but also the used prefix
+                fulltext: text
             } 
 
             /* 
-             * reason and victims are used for commands like ban or kick which accept multiple targets
+             * reason and targets are used for commands like ban or kick which accept multiple targets
              * for example: hi!kick [user1] [user2] [reason]
              * non number characters are removed from the targets to turn mentions into plain user IDs
             */
             
         }
         catch (error) { console.log(error) }
+    },
+
+    multitarget(args) {
+        if (!typeof(args) == "array") return;
+        args.push("")
+        var targets = args.concat("").map(a => a.replace(/[^0-9]+/g, ""))
+            targets = targets.slice(0, targets.indexOf(""))
+        var reason = args.slice(targets.length, args.length).join(" ")
+        if (!reason[0]) { reason = "(no reason set)"}
+        return {
+            targets: [...new Set(targets)],
+            reason,
+        }
     },
 
     setDefaultSettings(guildid) {
