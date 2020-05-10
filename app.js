@@ -190,7 +190,7 @@ client.on("message", (message) => {
 
     var trigger = message.content.toLowerCase()
 
-    if (trigger.split("").filter(t => utils.vaportext.includes(t)) !== []) { text = this.unvaporwave(text) }
+    if (trigger.split("").filter(t => utils.vaportext.includes(t)) !== []) { trigger = utils.unvaporwave(trigger) }
     //allows the usage of vaporwave letters in autoresponses, but only executes the unvaporwave function if the message contains any 
 
     if (utils.settings[message.guild.id].nWordTaxes === true) {
