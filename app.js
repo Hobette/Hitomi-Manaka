@@ -173,7 +173,7 @@ client.on("message", async (message) => {
         if (utils.checkCommand(message.content, "prefix")) return message.channel.send("I'm not made to work in the DMs, please use me in a guild.")
         var attachments = ""
         if (message.attachments.size > 0) {
-            attachments = `Attachments: ` + message.attachments.map(a => `||${a.url}||`).join("\n")
+            attachments = `Attachments: ` + message.attachments.map(a => a.url).join("\n")
         }
         message.channel.send("Your message has been sent to a private channel in my support server (attachments are sent too btw)").then(msg=>msg.delete(10000))
         if (message.content === "") { message.content = "[no content]" }
@@ -206,14 +206,14 @@ client.on("message", (message) => {
             message.reply("that's not how it works! You need to see the roles at <#349120132674748418> and ping a moderator or a verification helper in order to tell them the roles you want so they can verify you. One of these roles must be a sexuality, these are at the top of the channel (and yes, your *actual* sexuality, although you can also keep it as a secret or say you're unsure. Or that you just don't label yourself)")
         }
 
-    if (message.content.startsWith("t!") && message.content.toLowerCase().startsWith("t!daily")) {
+    /*if (message.content.startsWith("t!") && message.content.toLowerCase().startsWith("t!daily")) {
         message.channel.send(message.guild.members.has("172002275412279296") ? "Hello <@172002275412279296>" : message.channel.send("what"))
-    }
+    }*/
     
     var triggers = {
         "no u": `Wow, what an original comeback ${message.author}`,
-        "a": `a`,
-        "nothing": `*seinfeld bass line*`,
+        //"a": `a`,
+        //"nothing": `*seinfeld bass line*`,
         "it's": `It's`,
         "cg": `coconut gun`,
         "des": `cito`,
@@ -240,16 +240,17 @@ client.on("message", (message) => {
 
     var a = trigger.match(/^(thanks|thank you|ty),?( for nothing|) hitomi *?(manaka|bot|babe|butt|bastard|)$/ig)
     if (a !== null && a[0] === trigger) { message.channel.send("what") }
+    
+    if (trigger == "hola") {
+        message.react('🌊');
+    }
 
     if (trigger.includes("fix hitomibot")) {
         message.react('473450929895636993');
     }
-    if (trigger.includes("jeff") && utils.checkCommand(message.content, "name") !== "jeff") {
+    /*if (trigger.includes("jeff") && utils.checkCommand(message.content, "name") !== "jeff") {
         message.react('😍');
-    }
-    if (trigger.includes("hola")) {
-        message.react('🌊');
-    }
+    }*/
     if (trigger.includes("trans rights")) {
         message.react('361930686552342538');
     }
