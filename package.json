@@ -1,6 +1,6 @@
 {
   "name": "hitomi",
-  "version": "my name jeff",
+  "version": "0.0.1",
   "dependencies": {
     "axios": "^0.18.1",
     "cuentatras": "0.0.2",
@@ -22,9 +22,11 @@
   },
   "description": "My name jeff",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write ."
   },
   "author": "Tina the Cyclops",
   "license": "ISC"

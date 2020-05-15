@@ -1,4 +1,5 @@
-# Hitomi Manaka#4825 
+# Hitomi Manaka#4825
+
 Multipurpose Discord bot, except it actually has tons of unique commands<br/>
 my name jeff
 
